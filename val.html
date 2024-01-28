@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<head>
+<script language="javascript">
+function validate(formcheck)
+{
+
+if(formcheck.name.value=="")
+{
+alert("please fill in the name box");
+formcheck.name.focus();
+return false;
+}
+var mail=formcheck.email.value
+if(mail.indexof("@.")==-1)
+(
+alert("please fill in the name box");
+formcheck.name.focus();
+return false;
+
+}
+return true;
+)
+</script>
+</head>
+<body>
+<form name="form" action="mailto:ashkpt@gmail.com.pk" method="post">
+your name:<input type="text" name="name" value="" />
+your Email:<input type="text" name="email" value="" />
+<input type="button" name="submit" value="send" onclick="return validate(form);" />
+<input type="reset" name="reset" value="clear" />
+</form>
+
+</body>
+</html>

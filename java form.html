@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<head>
+<script>
+function cal()
+{
+var n,books,bill;
+n=document.F.name.value;
+books=parseInt(document.F.books.value);
+if(document.F.std[0].checked)
+bill=books*100-((books*100)*20/100);
+else if(document.F.std[1].checked)
+bill=books*100;
+alert("Hi" +n+ "!Your bill is" +bill);
+}
+</script>
+</head>
+
+<body>
+<form name="F">
+Enter your name:<input type="text" name="name" /><br />
+How many books have you purchased?<input type="text" name="books" /><br />
+Students get 20% concession! Are You a student?
+<input type="radio" name="std" value="1" checked="checked" />Yes
+<input type="radio" name="std" value="0"  />No<p>
+<input type="button" name="cal" value="Calculate Bill" onclick="cal();" />
+</form>
+
+</body>
+</html>
